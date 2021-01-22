@@ -2,9 +2,8 @@ export default (state =
   [], action) => {
   switch (action.type) {
     case 'ADD_QUOTE':
-      let newState = [...state]
-      newState.push(action.quote)
-      return newState
+      return state.concat(action.quote)
+      
       
 
     case 'REMOVE_QUOTE':
